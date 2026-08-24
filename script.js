@@ -2,7 +2,7 @@
 // PASSWORD WEBSITE
 // ==============================
 
-const PASSWORD_WEBSITE = "stokakun";
+const PASSWORD_WEBSITE = "stokrehan";
 
 
 // ==============================

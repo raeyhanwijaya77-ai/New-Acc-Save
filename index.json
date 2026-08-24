@@ -9,9 +9,6 @@
 
 <body>
 
-    <!-- =========================
-         HALAMAN PASSWORD
-    ========================== -->
     <div id="loginScreen">
 
         <div class="login-box">
@@ -41,8 +38,6 @@
 
         </div>
 
-
-        <!-- WA & SALURAN DI POJOK KANAN BAWAH -->
         <div class="login-floating-wa">
 
             <a
@@ -68,32 +63,20 @@
     </div>
 
 
-    <!-- =========================
-         WEBSITE UTAMA
-    ========================== -->
     <main id="app" class="container">
 
         <h1>🎮 Roblox Account Storage</h1>
 
         <p class="subtitle">
-            Simpan akun Roblox kamu
+            Simpan informasi akun Roblox kamu
         </p>
 
-
-        <!-- FORM TAMBAH AKUN -->
         <div class="form-box">
 
             <input
                 type="text"
                 id="username"
                 placeholder="Username Roblox"
-                autocomplete="off"
-            >
-
-            <input
-                type="password"
-                id="password"
-                placeholder="Password Roblox"
                 autocomplete="off"
             >
 
@@ -116,7 +99,6 @@
         </div>
 
 
-        <!-- DAFTAR -->
         <div class="list-header">
 
             <h2>Daftar Akun</h2>
@@ -131,13 +113,11 @@
         <div id="listAkun"></div>
 
 
-        <!-- FOOTER -->
         <div class="brand-footer">
             By Rehan Store
         </div>
 
 
-        <!-- WA & CHANNEL WEBSITE UTAMA -->
         <div class="floating-wa">
 
             <a

@@ -10,9 +10,6 @@ body {
     color: white;
 }
 
-
-/* LOGIN */
-
 #loginScreen {
     position: fixed;
     inset: 0;
@@ -41,11 +38,11 @@ body {
 
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255,255,255,0.12);
 
     backdrop-filter: blur(15px);
 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
 }
 
 .login-icon {
@@ -58,12 +55,9 @@ body {
 }
 
 .login-brand {
-    margin-bottom: 12px;
-
     color: #93c5fd;
-
-    font-size: 15px;
     font-weight: bold;
+    margin-bottom: 12px;
 }
 
 .login-box p {
@@ -72,14 +66,11 @@ body {
 
 #loginPassword {
     width: 100%;
-
     padding: 14px;
-
     margin-top: 15px;
 
     border: none;
     outline: none;
-
     border-radius: 10px;
 
     background: white;
@@ -90,9 +81,7 @@ body {
 
 #loginButton {
     width: 100%;
-
     padding: 14px;
-
     margin-top: 12px;
 
     border: none;
@@ -107,18 +96,11 @@ body {
     cursor: pointer;
 }
 
-#loginButton:hover,
-#addButton:hover {
-    opacity: 0.85;
-}
-
 #loginError {
     min-height: 24px;
-
     margin-top: 12px;
 
     color: #ff6b6b;
-
     font-weight: bold;
 }
 
@@ -137,13 +119,11 @@ body {
 
 .container h1 {
     text-align: center;
-
     font-size: 28px;
 }
 
 .subtitle {
     text-align: center;
-
     color: #d1d5db;
 }
 
@@ -151,7 +131,7 @@ body {
 /* FORM */
 
 .form-box {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
 
     padding: 20px;
 
@@ -183,7 +163,6 @@ textarea {
 
 textarea {
     height: 90px;
-
     resize: none;
 }
 
@@ -193,7 +172,6 @@ textarea {
     padding: 12px;
 
     border: none;
-
     border-radius: 10px;
 
     background: #22c55e;
@@ -201,7 +179,6 @@ textarea {
     color: white;
 
     font-size: 16px;
-
     font-weight: bold;
 
     cursor: pointer;
@@ -214,7 +191,6 @@ textarea {
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
     margin-top: 25px;
@@ -226,7 +202,6 @@ textarea {
 
 #totalAkun {
     color: #bfdbfe;
-
     font-size: 14px;
 }
 
@@ -234,7 +209,7 @@ textarea {
 /* CARD */
 
 .card {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255,255,255,0.12);
 
     padding: 15px;
 
@@ -254,7 +229,7 @@ textarea {
 }
 
 .info {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0,0,0,0.2);
 
     padding: 10px;
 
@@ -268,7 +243,7 @@ textarea {
 }
 
 
-/* TOMBOL */
+/* BUTTON */
 
 .action {
     display: grid;
@@ -284,13 +259,11 @@ textarea {
     padding: 10px;
 
     border: none;
-
     border-radius: 10px;
 
     color: white;
 
     font-size: 14px;
-
     font-weight: bold;
 
     cursor: pointer;
@@ -325,12 +298,10 @@ textarea {
     font-size: 14px;
 
     font-weight: bold;
-
-    letter-spacing: 0.5px;
 }
 
 
-/* FLOATING WA */
+/* FLOATING BUTTON */
 
 .login-floating-wa,
 .floating-wa {
@@ -363,10 +334,9 @@ textarea {
     text-decoration: none;
 
     font-size: 13px;
-
     font-weight: bold;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .wa-btn {
@@ -378,7 +348,7 @@ textarea {
 }
 
 
-/* KOSONG */
+/* EMPTY */
 
 .empty {
     margin-top: 15px;
@@ -389,7 +359,7 @@ textarea {
 
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
 
     color: #d1d5db;
 }
@@ -405,10 +375,6 @@ textarea {
 
     .container h1 {
         font-size: 25px;
-    }
-
-    .action {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     }

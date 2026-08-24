@@ -1,13 +1,4 @@
-// ==============================
-// PASSWORD WEBSITE
-// ==============================
-
-const PASSWORD_WEBSITE = "stokrehan";
-
-
-// ==============================
-// DATA
-// ==============================
+const PASSWORD_WEBSITE = "stokakunrehan";
 
 let akun = [];
 
@@ -16,14 +7,10 @@ try {
         JSON.parse(
             localStorage.getItem("akunRoblox")
         ) || [];
-} catch (error) {
+} catch {
     akun = [];
 }
 
-
-// ==============================
-// ELEMENT
-// ==============================
 
 const loginScreen =
     document.getElementById("loginScreen");
@@ -50,9 +37,7 @@ const totalAkun =
     document.getElementById("totalAkun");
 
 
-// ==============================
-// LOGIN
-// ==============================
+/* LOGIN */
 
 function login() {
 
@@ -79,7 +64,6 @@ function login() {
         loginPassword.value = "";
 
         loginPassword.focus();
-
     }
 }
 
@@ -92,7 +76,7 @@ loginButton.addEventListener(
 
 loginPassword.addEventListener(
     "keydown",
-    function (event) {
+    function(event) {
 
         if (event.key === "Enter") {
             login();
@@ -102,9 +86,7 @@ loginPassword.addEventListener(
 );
 
 
-// ==============================
-// SIMPAN
-// ==============================
+/* SIMPAN */
 
 function simpanData() {
 
@@ -117,7 +99,7 @@ function simpanData() {
 
         return true;
 
-    } catch (error) {
+    } catch {
 
         alert(
             "❌ Data gagal disimpan."
@@ -128,9 +110,20 @@ function simpanData() {
 }
 
 
-// ==============================
-// SENSOR GMAIL
-// ==============================
+/* AMANKAN TEKS */
+
+function aman(teks) {
+
+    return String(teks || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+
+/* SENSOR GMAIL */
 
 function sensorGmail(gmail) {
 
@@ -139,7 +132,7 @@ function sensorGmail(gmail) {
     }
 
     if (!gmail.includes("@")) {
-        return gmail;
+        return aman(gmail);
     }
 
     const bagian =
@@ -154,41 +147,46 @@ function sensorGmail(gmail) {
     if (nama.length <= 2) {
 
         return (
-            nama +
+            aman(nama) +
             "*****@" +
-            domain
+            aman(domain)
         );
-
     }
 
     return (
-        nama.substring(0, 2) +
+        aman(nama.substring(0, 2)) +
         "*****@" +
-        domain
+        aman(domain)
     );
 }
 
 
-// ==============================
-// TAMBAH AKUN
-// ==============================
+/* TAMBAH */
 
 function tambahAkun() {
 
     const username =
-        document.getElementById("username")
-        .value
-        .trim();
+        document
+            .getElementById("username")
+            .value
+            .trim();
+
+    const password =
+        document
+            .getElementById("password")
+            .value;
 
     const gmail =
-        document.getElementById("gmail")
-        .value
-        .trim();
+        document
+            .getElementById("gmail")
+            .value
+            .trim();
 
     const keterangan =
-        document.getElementById("keterangan")
-        .value
-        .trim();
+        document
+            .getElementById("keterangan")
+            .value
+            .trim();
 
 
     if (!username) {
@@ -200,6 +198,22 @@ function tambahAkun() {
         return;
     }
 
+
+    if (!password) {
+
+        alert(
+            "Password wajib diisi!"
+        );
+
+        return;
+    }
+
+
+    /*
+      Password sengaja TIDAK disimpan.
+      Password hanya dipakai untuk memastikan
+      kolom terisi, lalu langsung dibuang.
+    */
 
     akun.push({
 
@@ -222,6 +236,8 @@ function tambahAkun() {
 
     document.getElementById("username").value = "";
 
+    document.getElementById("password").value = "";
+
     document.getElementById("gmail").value = "";
 
     document.getElementById("keterangan").value = "";
@@ -241,9 +257,7 @@ addButton.addEventListener(
 );
 
 
-// ==============================
-// TAMPILKAN
-// ==============================
+/* TAMPILKAN */
 
 function tampilkanAkun() {
 
@@ -266,7 +280,7 @@ function tampilkanAkun() {
 
 
     akun.forEach(
-        function (item, index) {
+        function(item, index) {
 
             listAkun.innerHTML += `
 
@@ -284,6 +298,11 @@ function tampilkanAkun() {
                         </p>
 
                         <p>
+                            <strong>Password:</strong>
+                            ********
+                        </p>
+
+                        <p>
                             <strong>Keterangan:</strong>
                             ${aman(
                                 item.keterangan || "-"
@@ -296,7 +315,6 @@ function tampilkanAkun() {
 
                         <button
                             class="detail"
-                            type="button"
                             onclick="detailAkun(${index})"
                         >
                             Detail
@@ -304,7 +322,6 @@ function tampilkanAkun() {
 
                         <button
                             class="copy"
-                            type="button"
                             onclick="copyAkun(${index})"
                         >
                             Copy
@@ -312,7 +329,6 @@ function tampilkanAkun() {
 
                         <button
                             class="edit"
-                            type="button"
                             onclick="editAkun(${index})"
                         >
                             Edit
@@ -320,7 +336,6 @@ function tampilkanAkun() {
 
                         <button
                             class="delete"
-                            type="button"
                             onclick="hapusAkun(${index})"
                         >
                             Hapus
@@ -330,30 +345,12 @@ function tampilkanAkun() {
 
                 </div>
             `;
-
         }
     );
 }
 
 
-// ==============================
-// AMANKAN TEKS
-// ==============================
-
-function aman(teks) {
-
-    return String(teks)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}
-
-
-// ==============================
-// DETAIL
-// ==============================
+/* DETAIL */
 
 function detailAkun(index) {
 
@@ -365,6 +362,8 @@ function detailAkun(index) {
     alert(
 `Username : ${item.username}
 
+Password : ********
+
 Gmail : ${item.gmail || "-"}
 
 Keterangan : ${item.keterangan || "-"}`
@@ -372,9 +371,7 @@ Keterangan : ${item.keterangan || "-"}`
 }
 
 
-// ==============================
-// COPY
-// ==============================
+/* COPY */
 
 async function copyAkun(index) {
 
@@ -391,26 +388,22 @@ Keterangan : ${item.keterangan || "-"}`;
 
     try {
 
-        await navigator.clipboard
-            .writeText(text);
+        await navigator.clipboard.writeText(text);
 
         alert(
             "✅ Data berhasil dicopy!"
         );
 
-    } catch (error) {
+    } catch {
 
         alert(
             "❌ Gagal menyalin data."
         );
-
     }
 }
 
 
-// ==============================
-// EDIT
-// ==============================
+/* EDIT */
 
 function editAkun(index) {
 
@@ -458,12 +451,14 @@ function editAkun(index) {
 
     akun[index] = {
 
-        username: username.trim(),
+        username:
+            username.trim(),
 
-        gmail: gmail.trim(),
+        gmail:
+            gmail.trim(),
 
-        keterangan: keterangan.trim()
-
+        keterangan:
+            keterangan.trim()
     };
 
 
@@ -478,9 +473,7 @@ function editAkun(index) {
 }
 
 
-// ==============================
-// HAPUS
-// ==============================
+/* HAPUS */
 
 function hapusAkun(index) {
 
@@ -506,4 +499,4 @@ function hapusAkun(index) {
             );
         }
     }
-}
+    }

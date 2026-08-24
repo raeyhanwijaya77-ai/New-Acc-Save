@@ -1,0 +1,568 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #2563eb
+        );
+
+    color: white;
+}
+
+
+/* =========================
+   LOGIN SCREEN
+========================= */
+
+#loginScreen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #2563eb
+        );
+}
+
+
+.login-box {
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.35);
+}
+
+
+.login-icon {
+    font-size: 45px;
+}
+
+
+.login-box h1 {
+    margin: 10px 0 5px;
+
+    font-size: 30px;
+}
+
+
+.login-brand {
+    margin-bottom: 12px;
+
+    color: #93c5fd;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+}
+
+
+.login-box p {
+    margin-top: 10px;
+
+    color: #d1d5db;
+}
+
+
+#loginPassword {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: black;
+
+    font-size: 16px;
+}
+
+
+#loginButton {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #22c55e;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#loginButton:active {
+    transform: scale(0.98);
+}
+
+
+#loginError {
+    min-height: 24px;
+
+    margin-top: 12px;
+
+    color: #ff6b6b;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   WA & CHANNEL LOGIN
+========================= */
+
+.login-floating-wa {
+    position: fixed;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 10000;
+}
+
+
+.login-floating-wa a {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.3);
+}
+
+
+.login-floating-wa .wa-btn {
+    background: #22c55e;
+}
+
+
+.login-floating-wa .channel-btn {
+    background: #2563eb;
+}
+
+
+/* =========================
+   WEBSITE UTAMA
+========================= */
+
+.container {
+    display: none;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 20px;
+}
+
+
+.container h1 {
+    text-align: center;
+
+    font-size: 28px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #d1d5db;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-box {
+    background:
+        rgba(255,255,255,0.1);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    margin-top: 20px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 12px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: black;
+
+    font-size: 15px;
+}
+
+
+textarea {
+    height: 90px;
+
+    resize: none;
+}
+
+
+#addButton {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #22c55e;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HEADER DAFTAR
+========================= */
+
+.list-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+}
+
+
+.list-header h2 {
+    margin: 0;
+}
+
+
+#totalAkun {
+    color: #bfdbfe;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CARD AKUN
+========================= */
+
+.card {
+    background:
+        rgba(255,255,255,0.12);
+
+    padding: 15px;
+
+    margin-top: 15px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.15);
+}
+
+
+.card h3 {
+    margin: 0 0 10px;
+
+    color: #93c5fd;
+
+    word-break: break-word;
+}
+
+
+.info {
+    background:
+        rgba(0,0,0,0.2);
+
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+
+.info p {
+    margin: 7px 0;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   TOMBOL AKSI
+========================= */
+
+.action {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+
+.action button {
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.detail {
+    background: #3b82f6 !important;
+}
+
+
+.copy {
+    background: #8b5cf6 !important;
+}
+
+
+.edit {
+    background: #f59e0b !important;
+}
+
+
+.delete {
+    background: #ef4444 !important;
+}
+
+
+.action button:hover,
+#addButton:hover,
+#loginButton:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================
+   AKUN KOSONG
+========================= */
+
+.empty {
+    margin-top: 15px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.1);
+
+    color: #d1d5db;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.brand-footer {
+    text-align: center;
+
+    margin: 28px 0 70px;
+
+    color: #93c5fd;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================
+   FLOATING WA WEBSITE
+========================= */
+
+.floating-wa {
+    position: fixed;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 100;
+}
+
+
+.floating-wa a {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.3);
+}
+
+
+.floating-wa .wa-btn {
+    background: #22c55e;
+}
+
+
+.floating-wa .channel-btn {
+    background: #2563eb;
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 15px;
+    }
+
+
+    .container h1 {
+        font-size: 25px;
+    }
+
+
+    .action {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}

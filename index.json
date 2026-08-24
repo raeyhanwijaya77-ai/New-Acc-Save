@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Vault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HALAMAN PASSWORD
+    ========================== -->
+    <div id="loginScreen">
+
+        <div class="login-box">
+
+            <div class="login-icon">🔐</div>
+
+            <h1>Roblox Vault</h1>
+
+            <div class="login-brand">
+                By Rehan Store
+            </div>
+
+            <p>Masukkan password untuk masuk</p>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Masukkan password"
+                autocomplete="off"
+            >
+
+            <button id="loginButton" type="button">
+                Masuk
+            </button>
+
+            <div id="loginError"></div>
+
+        </div>
+
+
+        <!-- WA & SALURAN DI POJOK KANAN BAWAH -->
+        <div class="login-floating-wa">
+
+            <a
+                href="https://wa.me/6282319319768"
+                target="_blank"
+                rel="noopener"
+                class="wa-btn"
+            >
+                WA
+            </a>
+
+            <a
+                href="https://whatsapp.com/channel/0029VbCOpsZ2UPB9asft7t05"
+                target="_blank"
+                rel="noopener"
+                class="channel-btn"
+            >
+                CH
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         WEBSITE UTAMA
+    ========================== -->
+    <main id="app" class="container">
+
+        <h1>🎮 Roblox Account Storage</h1>
+
+        <p class="subtitle">
+            Simpan akun Roblox kamu
+        </p>
+
+
+        <!-- FORM TAMBAH AKUN -->
+        <div class="form-box">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username Roblox"
+                autocomplete="off"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password Roblox"
+                autocomplete="off"
+            >
+
+            <input
+                type="email"
+                id="gmail"
+                placeholder="Gmail"
+                autocomplete="off"
+            >
+
+            <textarea
+                id="keterangan"
+                placeholder="Keterangan akun"
+            ></textarea>
+
+            <button id="addButton" type="button">
+                + Tambah Akun
+            </button>
+
+        </div>
+
+
+        <!-- DAFTAR -->
+        <div class="list-header">
+
+            <h2>Daftar Akun</h2>
+
+            <span id="totalAkun">
+                0 akun
+            </span>
+
+        </div>
+
+
+        <div id="listAkun"></div>
+
+
+        <!-- FOOTER -->
+        <div class="brand-footer">
+            By Rehan Store
+        </div>
+
+
+        <!-- WA & CHANNEL WEBSITE UTAMA -->
+        <div class="floating-wa">
+
+            <a
+                href="https://wa.me/6282319319768"
+                target="_blank"
+                rel="noopener"
+                class="wa-btn"
+            >
+                WA
+            </a>
+
+            <a
+                href="https://whatsapp.com/channel/0029VbCOpsZ2UPB9asft7t05"
+                target="_blank"
+                rel="noopener"
+                class="channel-btn"
+            >
+                CH
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
